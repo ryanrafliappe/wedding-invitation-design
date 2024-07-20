@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulan & Fulanah</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main id="main">
+        <div id="cover">
+            <div class="center pb">
+                <img class="cover-frame" src="./assets/cover-bg.png" alt="cover background">
+
+                <div class="text-overlay">
+                    <div>
+                        <h1 class="text-center h1-cover" id="coverGroom"><%= data.groom.nickname %></h1>
+                        <h2 class="text-center white">&</p>
+                        <h1 class="text-center h1-cover" id="coverBride"><%= data.bride.nickname %></h1>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="text-center pure-white">Kepada Yth.</p>
+                <p class="text-center pure-white pb-1">Bapak/Ibu/Saudara(i)</p>
+                <h1 class="text-center pure-white pb-3" id="coverGuest"><%= to %></h1>
+            </div>
+            <div>
+                <button id="openBtn" class="shiny-button">Buka Undangan</button>
+            </div>
+        </div>
+        <div id="content" class="overflow">
+            <div id="audioSection" class=" sticky-button hidden">
+                <button id="toggleAudioBtn" class="btn-audio">
+                    <img src="./assets/pause-btn.svg" alt="audio button">
+                </button>
+                <div class="marquee">
+                    <p class="maroon">Kina Grannis - Can't Help Falling In Love (From Crazy Rich Asians)</p>
+                </div>
+            </div>
+
+            <div class="curved">
+                <section id="home">
+                    <div class="square">
+                        <p class="white"><i>The Wedding of</i></p>
+    
+                        <span class="divider"></span>
+                        <div class="home-name">
+                            <h1 class="gold title title-top" id="homeGroom"><%= data.groom.nickname %></h1>
+                            <h1 class="white cursive no-margin">&</h1>
+                            <h1 class="gold title title-bottom" id="homeBride"><%= data.bride.nickname %></h1>
+                        </div>
+                        <span class="divider"></span>
+    
+                        <div id="homeCountdown" class="white">
+                            <div class="countdown-item">
+                                <h2 id="days">00</h2>
+                                <p>Hari</p>
+                            </div>
+                            <div class="countdown-item">
+                                <h2 id="hours">00</h2>
+                                <p>Jam</p>
+                            </div>
+                            <div class="countdown-item">
+                                <h2 id="minutes">00</h2>
+                                <p>Menit</p>
+                            </div>
+                            <div class="countdown-item">
+                                <h2 id="seconds">00</h2>
+                                <p>Detik</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="bg-maroon">
+                <section id="hadits" class="anim anim-hidden">
+                    <p class="white pb-1">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."</p>
+                    <h2 class="gold">Q.S. Ar-Rum: 21</h2>
+                </section>
+            </div>
+
+            <div class="bg-white pt pb">
+                <section id="couple" class="anim anim-hidden">
+                    <div class="w-100 pb-1">
+                        <img class="img-center" src="./assets/bismillah.png" alt="bismillah">
+                    </div>
+                    <div class="pb">
+                        <h2 class="text-center maroon pb-1">Assalamu'alaikum wr. wb.</h2>
+                        <p class="text-center maroon">Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, serta kerabat sekalian, untuk menghadiri acara pernikahan kami:</p>
+                    </div>
+
+                    <div class="pb-3">
+                        <h1 class="gold text-center" id="coupleGroom"><%= data.groom.fullname %></h1>
+                        <p class="maroon text-center" id="coupleGroomInfo">( Anak <%= data.groom.child_number %> dari Bpk. <%= data.groom.father %> & Ibu <%= data.groom.mother %> )</p>
+                    </div>
+                    <div class="pb-3">
+                        <h1 class="maroon text-center with-line">&</h1>
+                    </div>
+                    <div>
+                        <h1 class="gold text-center" id="coupleBride"><%= data.bride.fullname %></h1>
+                        <p class="maroon text-center" id="coupleBrideInfo">( Anak <%= data.bride.child_number %> dari Bpk. <%= data.bride.father %> & Ibu <%= data.bride.mother %> )</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="bg-maroon pt pb">
+                <section id="event">
+                    <div class="event-container anim anim-hidden pb-3">
+                        <div class="event-image">
+                            <img class="akad" src="./assets/akad.png" alt="akad">
+                        </div>
+                        <div class="event-column">
+                            <div class="event-title bg-gold">
+                                <h2 class="maroon">Akad Nikah</h2>
+                            </div>
+                            <div class="event-info maroon pb-3 akad">
+                                <p class="text-center" id="eventAkadDay"><%= data.event.akad.day %></p>
+                                <h1 class="text-center" id="eventAkadDate"><%= data.event.akad.date %></h1>
+                                <p class="pb text-center" id="eventAkadTime"><%= data.event.akad.time %></p>
+                                
+                                <p class="pb-3" id="eventAkadAddress"><%= data.event.akad.address %></p>
+                                <a class="btn" href="<%= data.event.akad.maps %>" id="eventAkadMaps" target="_blank">LIHAT MAPS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-container anim anim-hidden">
+                        <div class="event-image">
+                            <img class="resepsi" src="./assets/resepsi.png" alt="resepsi">
+                        </div>
+                        <div class="event-column">
+                            <div class="event-info maroon pb-3 resepsi">
+                                <p class="text-center" id="eventReceptionDay"><%= data.event.reception.day %></p>
+                                <h1 class="text-center" id="eventReceptionDate"><%= data.event.reception.date %></h1>
+                                <p class="pb text-center" id="eventReceptionTime"><%= data.event.reception.time %></p>
+                                
+                                <p class="text-right pb-3" id="eventReceptionAddress"><%= data.event.reception.address %></p>
+                                <div class="text-right">
+                                    <a class="btn" href="<%= data.event.reception.maps %>" id="eventReceptionMaps" target="_blank">LIHAT MAPS</a>
+                                </div>
+                            </div>
+                            <div class="event-title bg-gold">
+                                <h2 class="maroon">Resepsi</h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="pt pb bg-white">
+                <section id="comment">
+                    <h2 class="text-center pb-1 anim anim-hidden">Ucapan & Doa</h2>
+
+                    <div class=" anim anim-hidden">
+                        <div class="comment-container-top bg-maroon">
+                            <form id="commentForm">
+                                <div class="pb-1 d-flex">
+                                    <input type="text" placeholder="Nama Anda" name="commentName" id="commentName" required>
+                                </div>
+    
+                                <div class="pb-1 d-flex">
+                                    <textarea rows="10" placeholder="Ucapan" name="commentMessage" id="commentMessage" required></textarea>
+                                </div>
+    
+                                <button type="submit" class="btn">Kirim</button>
+                            </form>
+                        </div>
+                        <div class="comment-container-bottom">
+                            <p class="text-center pt-1 pb-1"><span id="commentLength">0</span> komentar</p>
+    
+                            <div class="comment-container-bottom-inside" id="commentContainer"></div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="pt pb bg-maroon">
+                <section id="thanks" class="white text-center anim anim-hidden">
+                    <p class="pb-1">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara(i) berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</p>
+
+                    <p class="pb-3">Hormat kami yang mengundang</p>
+                    <h1 class="mb-3 gold" id="thanksName"><%= data.groom.nickname %> & <%= data.bride.nickname %></h1>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <audio src="./assets/song.mp3" id="backgroundMusic"></audio>
+
+    <!-- script -->
+    <script>
+        const countdownDate = "<%= data.event.countdown_date %>";
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

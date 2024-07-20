@@ -1,0 +1,33 @@
+{
+    "groom": {
+        "nickname": "Bayazid",
+        "fullname": "Bayazid Sustami M.N., ST",
+        "child_number": "Pertama",
+        "father": "Fulan bin Fulan",
+        "mother": "Fulanah binti Fulan"
+    },
+    "bride": {
+        "nickname": "Dae",
+        "fullname": "Dila Amalia, ST",
+        "child_number": "Kedua",
+        "father": "Fulan bin Fulan",
+        "mother": "Fulanah binti Fulan"
+    },
+    "event": {
+        "countdown_date": "2024-07-15 23:59:59",
+        "akad": {
+            "day": "Jumat",
+            "date": "29-01-2020",
+            "time": "10.00 WITA",
+            "address": "Jl. Moh. Paleo 3, Antang, Kec. Manggala, Kota Makassar, Sulawesi Selatan 90234",
+            "maps": ""
+        },
+        "reception": {
+            "day": "Jumat",
+            "date": "29-01-2025",
+            "time": "13.00 WITA - Selesai",
+            "address": "Jl. Moh. Paleo 3, Antang, Kec. Manggala, Kota Makassar, Sulawesi Selatan 90234",
+            "maps": ""
+        }
+    }
+}
