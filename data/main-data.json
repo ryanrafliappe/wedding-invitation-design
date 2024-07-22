@@ -20,7 +20,7 @@
             "date": "29-01-2020",
             "time": "10.00 WITA",
             "address": "Jl. Moh. Paleo 3, Antang, Kec. Manggala, Kota Makassar, Sulawesi Selatan 90234",
-            "maps": ""
+            "maps": "https://www.google.com/maps/place/SMAN+10+LUWU+UTARA/@-2.6535844,120.4588038,14z/data=!4m6!3m5!1s0x2d919f365b99b5ff:0xf18936eaab32456!8m2!3d-2.6503651!4d120.4732125!16s%2Fg%2F11fksws6_q?entry=ttu"
         },
         "reception": {
             "day": "Jumat",
@@ -29,5 +29,6 @@
             "address": "Jl. Moh. Paleo 3, Antang, Kec. Manggala, Kota Makassar, Sulawesi Selatan 90234",
             "maps": ""
         }
-    }
+    },
+    "db_uri": "mongodb://127.0.0.1:27017"
 }

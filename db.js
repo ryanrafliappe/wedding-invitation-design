@@ -1,6 +1,8 @@
+const fs = require('fs');
 const mongoose = require('mongoose');
 
-const uri = 'mongodb://127.0.0.1:27017';
+const mainData = JSON.parse(fs.readFileSync('./data/main-data.json'));
+const uri = mainData.db_uri;
 
 const connectDB = async () => {
     try {
