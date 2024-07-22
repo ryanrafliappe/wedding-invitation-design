@@ -81,17 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             commentContainer.innerHTML = renderHtml;
             document.getElementById('commentLength').innerText = data.length;
-        }).catch(error => console.error(error));
+        }).catch(err => console.error(err.message));
     }
     getDataComments();
 
     // save new comment
     form.addEventListener('submit', function( event ) {
         event.preventDefault();
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.disabled = true;
 
         const formData = new FormData(form);
         const urlEncodedData = new URLSearchParams(formData).toString();
-        // console.log(urlEncodedData);
 
         fetch('/save', {
             method: 'POST',
@@ -105,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
             getDataComments();
         })
-        .catch(error => console.error(error));
+        .catch(error => console.error(error.message))
+        .finally(() => submitBtn.disabled = false);
     });
 
     // audio toggle
@@ -165,16 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //         });
     //     });
 
-    function padZero(number) {
-        if (number >= 10 ) {
-            return number;
-        } else if ( number < 1 ) {
-            return `00`;
-        } else {
-            return `0${number}`;
-        }
-    }
-
     const renderComment = (name, message) => {
         return `<div class="message-container">
                     <div class="comment-icon">
@@ -185,5 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${ message }</p>
                     </div>
                 </div>`
+    }
+
+    function padZero(number) {
+        if (number >= 10 ) {
+            return number;
+        } else if ( number < 1 ) {
+            return `00`;
+        } else {
+            return `0${number}`;
+        }
+    }
+
+    function sanitize(string) {
+        return string.replace(/<[^>]*>/g, '');
     }
 });
