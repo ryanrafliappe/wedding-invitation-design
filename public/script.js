@@ -188,8 +188,4 @@ document.addEventListener('DOMContentLoaded', () => {
             return `0${number}`;
         }
     }
-
-    function sanitize(string) {
-        return string.replace(/<[^>]*>/g, '');
-    }
 });
