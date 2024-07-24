@@ -636,4 +636,8 @@ main {
   #main {
     width: 100vw;
   }
+
+  #cover {
+    width: 100%;
+  }
 }
