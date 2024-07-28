@@ -27,12 +27,14 @@ connectDB();
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+    const currentUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     const mainData = JSON.parse(fs.readFileSync('./data/main-data.json'));
     const to = req.query.to;
 
     res.render('index', {
         data: mainData,
         to,
+        currentUrl
     });
 });
 
