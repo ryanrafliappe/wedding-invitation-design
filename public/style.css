@@ -11,14 +11,15 @@ body {
 
 h1 {
   /* font-family: "Sacramento", cursive; */
-  font-family: "Great Vibes", cursive;
-  font-size: 36px;
+  /* font-family: "Great Vibes", cursive; */
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 30px;
   margin: 0px;
 }
 
 h2 {
   /* font-family: "Sacramento", cursive; */
-  font-family: "Great Vibes", cursive;
+  font-family: "Playwrite HR Lijeva", cursive;
   font-size: 24px;
   margin: 0px;
 }
@@ -98,7 +99,7 @@ p {
 
 .cursive {
   /* font-family: "Sacramento", cursive; */
-  font-family: "Great Vibes", cursive;
+  font-family: "Playwrite HR Lijeva", cursive;
 }
 
 .serif {
@@ -199,7 +200,7 @@ main {
 }
 
 #cover .h1-cover {
-  font-size: 64px;
+  font-size: 55px;
   color: #cea335;
 }
 
@@ -262,7 +263,7 @@ main {
 
 #home .title {
   font-weight: normal;
-  font-size: 64px;
+  font-size: 46px;
 }
 
 #home .home-name {
@@ -291,7 +292,7 @@ main {
 }
 
 #home #homeCountdown h2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #home #homeCountdown p {
@@ -392,7 +393,7 @@ main {
 }
 
 .event-container .event-title h2 {
-  font-size: 30px;
+  font-size: 26px;
   writing-mode: vertical-lr;
   text-orientation: mixed;
   transform: rotate(180deg);
@@ -405,7 +406,7 @@ main {
 }
 
 .event-container .event-info h1 {
-  font-size: 46px;
+  font-size: 30px;
 }
 
 .event-container .akad {
